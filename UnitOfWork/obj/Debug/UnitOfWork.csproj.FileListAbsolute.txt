@@ -1,0 +1,15 @@
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\UnitOfWork.dll.config
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\UnitOfWork.dll
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\UnitOfWork.pdb
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\DataModel.dll
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\EntityFramework.dll
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\EntityFramework.SqlServer.dll
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\GenericRepository.dll
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\System.Linq.Dynamic.dll
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\DataModel.pdb
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\GenericRepository.pdb
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\EntityFramework.xml
+D:\Sample\MachineMonitoringAPI\UnitOfWork\bin\Debug\EntityFramework.SqlServer.xml
+D:\Sample\MachineMonitoringAPI\UnitOfWork\obj\Debug\UnitOfWork.csprojResolveAssemblyReference.cache
+D:\Sample\MachineMonitoringAPI\UnitOfWork\obj\Debug\UnitOfWork.dll
+D:\Sample\MachineMonitoringAPI\UnitOfWork\obj\Debug\UnitOfWork.pdb

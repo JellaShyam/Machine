@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBForTestingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AMS_Event">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="SiteId" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AMS_Event_Daily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="AMSEventId" Type="int" Nullable="false" />
+    <Property Name="SiteId" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AMS_Event_Latest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="SiteId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="AMSEventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AMS_RishMaster_Group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AMSEventId" Type="int" Nullable="false" />
+    <Property Name="RishMasterEventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DemoUnit_Event">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SiteId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="RishMasterEventId" Type="int" Nullable="false" />
+    <Property Name="Sensor1" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor2" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor3" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor4" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor5" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor6" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor7" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor8" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="VibrationSensor" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="LiquidTemperatureSensor" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AirFlowSensor" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="WaterFlowSensor" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DemoUnit_LatestEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DemoUnit_EventId" Type="int" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="SiteId" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="Temperature" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Humidity" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="SiteId" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GPSDevice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GPSDeviceID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="PortNumber" Type="int" Nullable="false" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DeviceStatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GPSDevice_Event">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GPSDeviceId" Type="int" Nullable="false" />
+    <Property Name="Latitude" Type="numeric" Precision="12" Scale="8" Nullable="false" />
+    <Property Name="Longitude" Type="numeric" Precision="12" Scale="8" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GPSDevice_LatestEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="GPSDeviceId" Type="int" Nullable="false" />
+    <Property Name="GPSDeviceEventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LatestEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventId" Type="int" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="SiteId" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MyAppsDemoEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SiteId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="Temperature" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Vibration" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Pressure" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor4" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor5" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor6" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor7" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor8" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor9" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor10" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor11" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Sensor12" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="RishMasterEventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MyAppsDemoEvent_Latest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+    <Property Name="SiteID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MyAppsDemoEventId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RishMasterEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeviceInstanceID" Type="tinyint" Nullable="false" />
+    <Property Name="RPhaseVoltage" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="YPhaseVoltage" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="BPhaseVoltage" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="RPhaseCurrent" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="YPhaseCurrent" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="BPhaseCurrent" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="RPhaseWattage" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="YPhaseWattage" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="BPhaseWattage" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="RPhasePower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="YPhasePower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="BPhasePower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="RPhaseReactivePower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="YPhaseReactivePower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="BPhaseReactivePower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="RPhasePowerFactor" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="YPhasePowerFactor" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="BPhasePowerFactor" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="RPhasePhaseAngle" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="YPhasePhaseAngle" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="BPhasePhaseAngle" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AverageVotage" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="SumofVoltages" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AverageCurrent" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="SumofCurrents" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AverageWatt" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="SumofWatt" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AverageofPower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="SumofPower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AverageofReactivePower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="SumofReactivePower" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AveragePowerFactor" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="SumofPowerFactor" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AveragePhaseAngle" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="SumofPhaseAngle" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="Frequency" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="ImportWattHours" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="ExportWattHours" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="ImportReactiveHours" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="ExportReactiveHours" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="VoltAmpereHours" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AvgMaximumVoltage" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AvgMinimumVoltage" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AvgMaximumCurrent" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="AvgMinimumCurrent" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="ActiveImportEnergy" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="ActiveExportEnergy" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="ReactiveImportEnergy" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="ReactiveExportEnergy" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AMS_Event_Daily_AMS_Event">
+    <End Role="AMS_Event" Type="Self.AMS_Event" Multiplicity="1" />
+    <End Role="AMS_Event_Daily" Type="Self.AMS_Event_Daily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AMS_Event">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AMS_Event_Daily">
+        <PropertyRef Name="AMSEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AMS_Event_Latest_AMS_Event">
+    <End Role="AMS_Event" Type="Self.AMS_Event" Multiplicity="1" />
+    <End Role="AMS_Event_Latest" Type="Self.AMS_Event_Latest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AMS_Event">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AMS_Event_Latest">
+        <PropertyRef Name="AMSEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AMS_RishMaster_Group_AMS_Event">
+    <End Role="AMS_Event" Type="Self.AMS_Event" Multiplicity="1" />
+    <End Role="AMS_RishMaster_Group" Type="Self.AMS_RishMaster_Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AMS_Event">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AMS_RishMaster_Group">
+        <PropertyRef Name="AMSEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AMS_RishMaster_Group_RishMasterEvent">
+    <End Role="RishMasterEvent" Type="Self.RishMasterEvent" Multiplicity="1" />
+    <End Role="AMS_RishMaster_Group" Type="Self.AMS_RishMaster_Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RishMasterEvent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AMS_RishMaster_Group">
+        <PropertyRef Name="RishMasterEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DemoUnit_Event_DemoUnit_Event">
+    <End Role="RishMasterEvent" Type="Self.RishMasterEvent" Multiplicity="1" />
+    <End Role="DemoUnit_Event" Type="Self.DemoUnit_Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RishMasterEvent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DemoUnit_Event">
+        <PropertyRef Name="RishMasterEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DemoUnit_LatestEvent_DemoUnit_Event">
+    <End Role="DemoUnit_Event" Type="Self.DemoUnit_Event" Multiplicity="1" />
+    <End Role="DemoUnit_LatestEvent" Type="Self.DemoUnit_LatestEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DemoUnit_Event">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DemoUnit_LatestEvent">
+        <PropertyRef Name="DemoUnit_EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GPSDevice_Event_GPSDevice">
+    <End Role="GPSDevice" Type="Self.GPSDevice" Multiplicity="1" />
+    <End Role="GPSDevice_Event" Type="Self.GPSDevice_Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GPSDevice">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GPSDevice_Event">
+        <PropertyRef Name="GPSDeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GPSDevice_LatestEvent_GPSDevice">
+    <End Role="GPSDevice" Type="Self.GPSDevice" Multiplicity="1" />
+    <End Role="GPSDevice_LatestEvent" Type="Self.GPSDevice_LatestEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GPSDevice">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GPSDevice_LatestEvent">
+        <PropertyRef Name="GPSDeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GPSDevice_LatestEvent_GPSDevice_Event">
+    <End Role="GPSDevice_Event" Type="Self.GPSDevice_Event" Multiplicity="1" />
+    <End Role="GPSDevice_LatestEvent" Type="Self.GPSDevice_LatestEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GPSDevice_Event">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GPSDevice_LatestEvent">
+        <PropertyRef Name="GPSDeviceEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LatestEvent_Event">
+    <End Role="Event" Type="Self.Event" Multiplicity="1" />
+    <End Role="LatestEvent" Type="Self.LatestEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LatestEvent">
+        <PropertyRef Name="EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MyAppsDemoEvent_Latest_MyAppsDemoEvent">
+    <End Role="MyAppsDemoEvent" Type="Self.MyAppsDemoEvent" Multiplicity="1" />
+    <End Role="MyAppsDemoEvent_Latest" Type="Self.MyAppsDemoEvent_Latest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MyAppsDemoEvent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MyAppsDemoEvent_Latest">
+        <PropertyRef Name="MyAppsDemoEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MyAppsDemoEvent_RishMasterEvent">
+    <End Role="RishMasterEvent" Type="Self.RishMasterEvent" Multiplicity="1" />
+    <End Role="MyAppsDemoEvent" Type="Self.MyAppsDemoEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RishMasterEvent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MyAppsDemoEvent">
+        <PropertyRef Name="RishMasterEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBForTestingModelStoreContainer">
+    <EntitySet Name="AMS_Event" EntityType="Self.AMS_Event" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Event_Daily" EntityType="Self.AMS_Event_Daily" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Event_Latest" EntityType="Self.AMS_Event_Latest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_RishMaster_Group" EntityType="Self.AMS_RishMaster_Group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DemoUnit_Event" EntityType="Self.DemoUnit_Event" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DemoUnit_LatestEvent" EntityType="Self.DemoUnit_LatestEvent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GPSDevice" EntityType="Self.GPSDevice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GPSDevice_Event" EntityType="Self.GPSDevice_Event" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GPSDevice_LatestEvent" EntityType="Self.GPSDevice_LatestEvent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LatestEvent" EntityType="Self.LatestEvent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyAppsDemoEvent" EntityType="Self.MyAppsDemoEvent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyAppsDemoEvent_Latest" EntityType="Self.MyAppsDemoEvent_Latest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RishMasterEvent" EntityType="Self.RishMasterEvent" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AMS_Event_Daily_AMS_Event" Association="Self.FK_AMS_Event_Daily_AMS_Event">
+      <End Role="AMS_Event" EntitySet="AMS_Event" />
+      <End Role="AMS_Event_Daily" EntitySet="AMS_Event_Daily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AMS_Event_Latest_AMS_Event" Association="Self.FK_AMS_Event_Latest_AMS_Event">
+      <End Role="AMS_Event" EntitySet="AMS_Event" />
+      <End Role="AMS_Event_Latest" EntitySet="AMS_Event_Latest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AMS_RishMaster_Group_AMS_Event" Association="Self.FK_AMS_RishMaster_Group_AMS_Event">
+      <End Role="AMS_Event" EntitySet="AMS_Event" />
+      <End Role="AMS_RishMaster_Group" EntitySet="AMS_RishMaster_Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AMS_RishMaster_Group_RishMasterEvent" Association="Self.FK_AMS_RishMaster_Group_RishMasterEvent">
+      <End Role="RishMasterEvent" EntitySet="RishMasterEvent" />
+      <End Role="AMS_RishMaster_Group" EntitySet="AMS_RishMaster_Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DemoUnit_Event_DemoUnit_Event" Association="Self.FK_DemoUnit_Event_DemoUnit_Event">
+      <End Role="RishMasterEvent" EntitySet="RishMasterEvent" />
+      <End Role="DemoUnit_Event" EntitySet="DemoUnit_Event" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DemoUnit_LatestEvent_DemoUnit_Event" Association="Self.FK_DemoUnit_LatestEvent_DemoUnit_Event">
+      <End Role="DemoUnit_Event" EntitySet="DemoUnit_Event" />
+      <End Role="DemoUnit_LatestEvent" EntitySet="DemoUnit_LatestEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GPSDevice_Event_GPSDevice" Association="Self.FK_GPSDevice_Event_GPSDevice">
+      <End Role="GPSDevice" EntitySet="GPSDevice" />
+      <End Role="GPSDevice_Event" EntitySet="GPSDevice_Event" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GPSDevice_LatestEvent_GPSDevice" Association="Self.FK_GPSDevice_LatestEvent_GPSDevice">
+      <End Role="GPSDevice" EntitySet="GPSDevice" />
+      <End Role="GPSDevice_LatestEvent" EntitySet="GPSDevice_LatestEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GPSDevice_LatestEvent_GPSDevice_Event" Association="Self.FK_GPSDevice_LatestEvent_GPSDevice_Event">
+      <End Role="GPSDevice_Event" EntitySet="GPSDevice_Event" />
+      <End Role="GPSDevice_LatestEvent" EntitySet="GPSDevice_LatestEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LatestEvent_Event" Association="Self.FK_LatestEvent_Event">
+      <End Role="Event" EntitySet="Event" />
+      <End Role="LatestEvent" EntitySet="LatestEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MyAppsDemoEvent_Latest_MyAppsDemoEvent" Association="Self.FK_MyAppsDemoEvent_Latest_MyAppsDemoEvent">
+      <End Role="MyAppsDemoEvent" EntitySet="MyAppsDemoEvent" />
+      <End Role="MyAppsDemoEvent_Latest" EntitySet="MyAppsDemoEvent_Latest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MyAppsDemoEvent_RishMasterEvent" Association="Self.FK_MyAppsDemoEvent_RishMasterEvent">
+      <End Role="RishMasterEvent" EntitySet="RishMasterEvent" />
+      <End Role="MyAppsDemoEvent" EntitySet="MyAppsDemoEvent" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

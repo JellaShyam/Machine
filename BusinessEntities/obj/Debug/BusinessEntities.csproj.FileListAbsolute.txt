@@ -1,0 +1,4 @@
+D:\Sample\MachineMonitoringAPI\BusinessEntities\bin\Debug\BusinessEntities.dll
+D:\Sample\MachineMonitoringAPI\BusinessEntities\bin\Debug\BusinessEntities.pdb
+D:\Sample\MachineMonitoringAPI\BusinessEntities\obj\Debug\BusinessEntities.dll
+D:\Sample\MachineMonitoringAPI\BusinessEntities\obj\Debug\BusinessEntities.pdb

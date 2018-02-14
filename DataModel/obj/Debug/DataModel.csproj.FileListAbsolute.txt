@@ -1,0 +1,9 @@
+D:\Sample\MachineMonitoringAPI\DataModel\bin\Debug\DataModel.dll.config
+D:\Sample\MachineMonitoringAPI\DataModel\bin\Debug\DataModel.dll
+D:\Sample\MachineMonitoringAPI\DataModel\bin\Debug\DataModel.pdb
+D:\Sample\MachineMonitoringAPI\DataModel\bin\Debug\EntityFramework.dll
+D:\Sample\MachineMonitoringAPI\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Sample\MachineMonitoringAPI\DataModel\bin\Debug\EntityFramework.xml
+D:\Sample\MachineMonitoringAPI\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Sample\MachineMonitoringAPI\DataModel\obj\Debug\DataModel.dll
+D:\Sample\MachineMonitoringAPI\DataModel\obj\Debug\DataModel.pdb

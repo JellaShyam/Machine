@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2f696fe9ec9040f486f7417a4076f57c" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="DBForTestingModel.AMS_Event" Width="1.5" PointX="3.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.AMS_Event_Daily" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.AMS_Event_Latest" Width="1.5" PointX="6" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.AMS_RishMaster_Group" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.DemoUnit_Event" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.DemoUnit_LatestEvent" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.Event" Width="1.5" PointX="8.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.GPSDevice" Width="1.5" PointX="7.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.GPSDevice_Event" Width="1.5" PointX="10" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.GPSDevice_LatestEvent" Width="1.5" PointX="12.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.LatestEvent" Width="1.5" PointX="11" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.MyAppsDemoEvent" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.MyAppsDemoEvent_Latest" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBForTestingModel.RishMasterEvent" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="DBForTestingModel.FK_AMS_Event_Daily_AMS_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_AMS_Event_Latest_AMS_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_AMS_RishMaster_Group_AMS_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_AMS_RishMaster_Group_RishMasterEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_DemoUnit_Event_DemoUnit_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_DemoUnit_LatestEvent_DemoUnit_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_LatestEvent_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_GPSDevice_Event_GPSDevice" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_GPSDevice_LatestEvent_GPSDevice" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_GPSDevice_LatestEvent_GPSDevice_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_MyAppsDemoEvent_Latest_MyAppsDemoEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="DBForTestingModel.FK_MyAppsDemoEvent_RishMasterEvent" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

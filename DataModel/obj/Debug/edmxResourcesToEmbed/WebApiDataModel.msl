@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBForTestingModelStoreContainer" CdmEntityContainer="DBForTestingEntities">
+    <EntitySetMapping Name="AMS_Event">
+      <EntityTypeMapping TypeName="DBForTestingModel.AMS_Event">
+        <MappingFragment StoreEntitySet="AMS_Event">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Event_Daily">
+      <EntityTypeMapping TypeName="DBForTestingModel.AMS_Event_Daily">
+        <MappingFragment StoreEntitySet="AMS_Event_Daily">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="AMSEventId" ColumnName="AMSEventId" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Event_Latest">
+      <EntityTypeMapping TypeName="DBForTestingModel.AMS_Event_Latest">
+        <MappingFragment StoreEntitySet="AMS_Event_Latest">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="AMSEventId" ColumnName="AMSEventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_RishMaster_Group">
+      <EntityTypeMapping TypeName="DBForTestingModel.AMS_RishMaster_Group">
+        <MappingFragment StoreEntitySet="AMS_RishMaster_Group">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AMSEventId" ColumnName="AMSEventId" />
+          <ScalarProperty Name="RishMasterEventId" ColumnName="RishMasterEventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DemoUnit_Event">
+      <EntityTypeMapping TypeName="DBForTestingModel.DemoUnit_Event">
+        <MappingFragment StoreEntitySet="DemoUnit_Event">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="RishMasterEventId" ColumnName="RishMasterEventId" />
+          <ScalarProperty Name="Sensor1" ColumnName="Sensor1" />
+          <ScalarProperty Name="Sensor2" ColumnName="Sensor2" />
+          <ScalarProperty Name="Sensor3" ColumnName="Sensor3" />
+          <ScalarProperty Name="Sensor4" ColumnName="Sensor4" />
+          <ScalarProperty Name="Sensor5" ColumnName="Sensor5" />
+          <ScalarProperty Name="Sensor6" ColumnName="Sensor6" />
+          <ScalarProperty Name="Sensor7" ColumnName="Sensor7" />
+          <ScalarProperty Name="Sensor8" ColumnName="Sensor8" />
+          <ScalarProperty Name="VibrationSensor" ColumnName="VibrationSensor" />
+          <ScalarProperty Name="LiquidTemperatureSensor" ColumnName="LiquidTemperatureSensor" />
+          <ScalarProperty Name="AirFlowSensor" ColumnName="AirFlowSensor" />
+          <ScalarProperty Name="WaterFlowSensor" ColumnName="WaterFlowSensor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DemoUnit_LatestEvent">
+      <EntityTypeMapping TypeName="DBForTestingModel.DemoUnit_LatestEvent">
+        <MappingFragment StoreEntitySet="DemoUnit_LatestEvent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DemoUnit_EventId" ColumnName="DemoUnit_EventId" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="DBForTestingModel.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPSDevices">
+      <EntityTypeMapping TypeName="DBForTestingModel.GPSDevice">
+        <MappingFragment StoreEntitySet="GPSDevice">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GPSDeviceID" ColumnName="GPSDeviceID" />
+          <ScalarProperty Name="PortNumber" ColumnName="PortNumber" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="DeviceStatus" ColumnName="DeviceStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPSDevice_Event">
+      <EntityTypeMapping TypeName="DBForTestingModel.GPSDevice_Event">
+        <MappingFragment StoreEntitySet="GPSDevice_Event">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GPSDeviceId" ColumnName="GPSDeviceId" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPSDevice_LatestEvent">
+      <EntityTypeMapping TypeName="DBForTestingModel.GPSDevice_LatestEvent">
+        <MappingFragment StoreEntitySet="GPSDevice_LatestEvent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="GPSDeviceId" ColumnName="GPSDeviceId" />
+          <ScalarProperty Name="GPSDeviceEventId" ColumnName="GPSDeviceEventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LatestEvents">
+      <EntityTypeMapping TypeName="DBForTestingModel.LatestEvent">
+        <MappingFragment StoreEntitySet="LatestEvent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyAppsDemoEvents">
+      <EntityTypeMapping TypeName="DBForTestingModel.MyAppsDemoEvent">
+        <MappingFragment StoreEntitySet="MyAppsDemoEvent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Vibration" ColumnName="Vibration" />
+          <ScalarProperty Name="Pressure" ColumnName="Pressure" />
+          <ScalarProperty Name="Sensor4" ColumnName="Sensor4" />
+          <ScalarProperty Name="Sensor5" ColumnName="Sensor5" />
+          <ScalarProperty Name="Sensor6" ColumnName="Sensor6" />
+          <ScalarProperty Name="Sensor7" ColumnName="Sensor7" />
+          <ScalarProperty Name="Sensor8" ColumnName="Sensor8" />
+          <ScalarProperty Name="Sensor9" ColumnName="Sensor9" />
+          <ScalarProperty Name="Sensor10" ColumnName="Sensor10" />
+          <ScalarProperty Name="Sensor11" ColumnName="Sensor11" />
+          <ScalarProperty Name="Sensor12" ColumnName="Sensor12" />
+          <ScalarProperty Name="RishMasterEventId" ColumnName="RishMasterEventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyAppsDemoEvent_Latest">
+      <EntityTypeMapping TypeName="DBForTestingModel.MyAppsDemoEvent_Latest">
+        <MappingFragment StoreEntitySet="MyAppsDemoEvent_Latest">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="MyAppsDemoEventId" ColumnName="MyAppsDemoEventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RishMasterEvents">
+      <EntityTypeMapping TypeName="DBForTestingModel.RishMasterEvent">
+        <MappingFragment StoreEntitySet="RishMasterEvent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceInstanceID" ColumnName="DeviceInstanceID" />
+          <ScalarProperty Name="RPhaseVoltage" ColumnName="RPhaseVoltage" />
+          <ScalarProperty Name="YPhaseVoltage" ColumnName="YPhaseVoltage" />
+          <ScalarProperty Name="BPhaseVoltage" ColumnName="BPhaseVoltage" />
+          <ScalarProperty Name="RPhaseCurrent" ColumnName="RPhaseCurrent" />
+          <ScalarProperty Name="YPhaseCurrent" ColumnName="YPhaseCurrent" />
+          <ScalarProperty Name="BPhaseCurrent" ColumnName="BPhaseCurrent" />
+          <ScalarProperty Name="RPhaseWattage" ColumnName="RPhaseWattage" />
+          <ScalarProperty Name="YPhaseWattage" ColumnName="YPhaseWattage" />
+          <ScalarProperty Name="BPhaseWattage" ColumnName="BPhaseWattage" />
+          <ScalarProperty Name="RPhasePower" ColumnName="RPhasePower" />
+          <ScalarProperty Name="YPhasePower" ColumnName="YPhasePower" />
+          <ScalarProperty Name="BPhasePower" ColumnName="BPhasePower" />
+          <ScalarProperty Name="RPhaseReactivePower" ColumnName="RPhaseReactivePower" />
+          <ScalarProperty Name="YPhaseReactivePower" ColumnName="YPhaseReactivePower" />
+          <ScalarProperty Name="BPhaseReactivePower" ColumnName="BPhaseReactivePower" />
+          <ScalarProperty Name="RPhasePowerFactor" ColumnName="RPhasePowerFactor" />
+          <ScalarProperty Name="YPhasePowerFactor" ColumnName="YPhasePowerFactor" />
+          <ScalarProperty Name="BPhasePowerFactor" ColumnName="BPhasePowerFactor" />
+          <ScalarProperty Name="RPhasePhaseAngle" ColumnName="RPhasePhaseAngle" />
+          <ScalarProperty Name="YPhasePhaseAngle" ColumnName="YPhasePhaseAngle" />
+          <ScalarProperty Name="BPhasePhaseAngle" ColumnName="BPhasePhaseAngle" />
+          <ScalarProperty Name="AverageVotage" ColumnName="AverageVotage" />
+          <ScalarProperty Name="SumofVoltages" ColumnName="SumofVoltages" />
+          <ScalarProperty Name="AverageCurrent" ColumnName="AverageCurrent" />
+          <ScalarProperty Name="SumofCurrents" ColumnName="SumofCurrents" />
+          <ScalarProperty Name="AverageWatt" ColumnName="AverageWatt" />
+          <ScalarProperty Name="SumofWatt" ColumnName="SumofWatt" />
+          <ScalarProperty Name="AverageofPower" ColumnName="AverageofPower" />
+          <ScalarProperty Name="SumofPower" ColumnName="SumofPower" />
+          <ScalarProperty Name="AverageofReactivePower" ColumnName="AverageofReactivePower" />
+          <ScalarProperty Name="SumofReactivePower" ColumnName="SumofReactivePower" />
+          <ScalarProperty Name="AveragePowerFactor" ColumnName="AveragePowerFactor" />
+          <ScalarProperty Name="SumofPowerFactor" ColumnName="SumofPowerFactor" />
+          <ScalarProperty Name="AveragePhaseAngle" ColumnName="AveragePhaseAngle" />
+          <ScalarProperty Name="SumofPhaseAngle" ColumnName="SumofPhaseAngle" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="ImportWattHours" ColumnName="ImportWattHours" />
+          <ScalarProperty Name="ExportWattHours" ColumnName="ExportWattHours" />
+          <ScalarProperty Name="ImportReactiveHours" ColumnName="ImportReactiveHours" />
+          <ScalarProperty Name="ExportReactiveHours" ColumnName="ExportReactiveHours" />
+          <ScalarProperty Name="VoltAmpereHours" ColumnName="VoltAmpereHours" />
+          <ScalarProperty Name="AvgMaximumVoltage" ColumnName="AvgMaximumVoltage" />
+          <ScalarProperty Name="AvgMinimumVoltage" ColumnName="AvgMinimumVoltage" />
+          <ScalarProperty Name="AvgMaximumCurrent" ColumnName="AvgMaximumCurrent" />
+          <ScalarProperty Name="AvgMinimumCurrent" ColumnName="AvgMinimumCurrent" />
+          <ScalarProperty Name="ActiveImportEnergy" ColumnName="ActiveImportEnergy" />
+          <ScalarProperty Name="ActiveExportEnergy" ColumnName="ActiveExportEnergy" />
+          <ScalarProperty Name="ReactiveImportEnergy" ColumnName="ReactiveImportEnergy" />
+          <ScalarProperty Name="ReactiveExportEnergy" ColumnName="ReactiveExportEnergy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
